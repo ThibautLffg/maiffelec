@@ -33,7 +33,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
           <img
-            src="/public/clim.avif"
+            src="/clim.avif"
             alt="Electrician working"
             className="w-full h-full object-cover brightness-[0.3]"
             referrerPolicy="no-referrer"
@@ -117,7 +117,7 @@ export default function Home() {
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="/public/pages/gainablegrand.jpeg"
+                src="/pages/gainablegrand.jpeg"
                 alt="Our team"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
