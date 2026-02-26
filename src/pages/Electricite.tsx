@@ -9,7 +9,7 @@ const services = [
   },
   {
     title: 'Mise aux Normes',
-    description: 'Mise en conformité NFC 15-100 pour assurer la sécurité de votre installation et de vos proches.',
+    description: 'Mise en conformité NFC 15-100 pour assurer la Fiabilité de votre installation et de vos proches.',
     icon: ShieldAlert,
   },
   {
