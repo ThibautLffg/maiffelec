@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex items-center gap-3 mb-6">
             <img
-              src="/logo.png"
+              src="/logoblanc.png"
               alt="Maifelec"
               className="h-10 w-auto object-contain"
             />

@@ -86,21 +86,21 @@ export default function Contact() {
           <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
-                <div className="w-10 h-10 bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-4">
+                <div className="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
                   <Phone size={20} />
                 </div>
                 <h4 className="font-bold mb-1">Téléphone</h4>
                 <p className="text-slate-600 text-sm">06 62 79 26 35</p>
               </div>
               <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
-                <div className="w-10 h-10 bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-4">
+                <div className="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
                   <Mail size={20} />
                 </div>
                 <h4 className="font-bold mb-1">Email</h4>
                 <p className="text-slate-600 text-sm">romain.maifelec@gmail.com</p>
               </div>
               <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm sm:col-span-2">
-                <div className="w-10 h-10 bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-4">
+                <div className="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
                   <MapPin size={20} />
                 </div>
                 <h4 className="font-bold mb-1">Zone d'intervention</h4>
@@ -157,7 +157,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-blue-700 disabled:opacity-60 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
+                  className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-primary/80 disabled:opacity-60 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
                 >
                   {loading ? 'Envoi en cours...' : 'Envoyer ma demande'} <Send size={18} />
                 </button>
@@ -200,7 +200,7 @@ export default function Contact() {
               ))}
             </div>
 
-            <div className="mt-12 bg-blue-50 p-8 rounded-3xl border border-blue-100">
+            <div className="mt-12 bg-primary/5 p-8 rounded-3xl border border-emerald-100">
               <h4 className="font-bold mb-2">Note moyenne : 4.9/5</h4>
               <p className="text-sm text-slate-600 mb-4">Basé sur plus de 150 avis vérifiés sur Google et Pages Jaunes.</p>
               <div className="flex gap-1">

@@ -5,9 +5,10 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Outfit", sans-serif;
   
-  --color-primary: #0056b3;
-  --color-secondary: #f8f9fa;
-  --color-accent: #ffc107;
+  /* Couleurs Maifelec */
+  --color-primary: #007672;
+  --color-secondary: #f4f9f9;
+  --color-accent: #19a79f;
 }
 
 @layer base {

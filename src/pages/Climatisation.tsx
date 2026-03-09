@@ -86,11 +86,11 @@ export default function Climatisation() {
       </section>
 
       {/* Maintenance */}
-      <section className="section-padding bg-blue-600 text-white mb-30">
+      <section className="section-padding bg-primary text-white mb-30">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl mb-6 text-white">Entretien & Dépannage</h2>
-            <p className="text-blue-100 mb-8 leading-relaxed">
+            <p className="text-emerald-100 mb-8 leading-relaxed">
               Une climatisation bien entretenue consomme moins et dure plus longtemps. Nous proposons des contrats d'entretien annuels pour garantir la qualité de votre air.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -115,7 +115,7 @@ export default function Climatisation() {
             </p>
             <a
               href="tel:0600000000"
-              className="block w-full bg-primary text-white text-center py-4 rounded-xl font-bold hover:bg-blue-700 transition-all"
+              className="block w-full bg-primary text-white text-center py-4 rounded-xl font-bold hover:bg-primary/80 transition-all"
             >
               Appeler un technicien
             </a>

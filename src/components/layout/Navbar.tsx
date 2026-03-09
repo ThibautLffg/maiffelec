@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 group">
           <img
-            src="/logo.png"
+            src={isTransparent ? '/logoblanc.png' : '/logo.png'}
             alt="Maifelec"
             className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
           />
@@ -46,7 +46,7 @@ export default function Navbar() {
                 isTransparent ? 'text-white' : 'text-slate-900'
               )}
             >
-              Maifelec
+              MAIFELEC
             </span>
             <span
               className={cn(
@@ -81,7 +81,7 @@ export default function Navbar() {
           ))}
           <a
             href="tel:0600000000"
-            className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+            className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-primary/80 transition-all shadow-lg shadow-emerald-200"
           >
             <Phone size={16} />
             06 62 79 26 35

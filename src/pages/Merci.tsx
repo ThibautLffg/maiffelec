@@ -30,7 +30,7 @@ export default function Merci() {
             </Link>
             <a
               href="tel:0600000000"
-              className="flex-1 bg-primary text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-all"
+              className="flex-1 bg-primary text-white py-4 rounded-xl font-bold hover:bg-primary/80 transition-all"
             >
               Appeler Maifelec
             </a>

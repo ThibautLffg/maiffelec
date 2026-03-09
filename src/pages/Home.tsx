@@ -8,7 +8,7 @@ const services = [
     description: 'Installation et maintenance de systèmes split, multi-split et gainables.',
     icon: Wind,
     link: '/climatisation',
-    color: 'bg-blue-50 text-blue-600',
+    color: 'bg-primary/10 text-primary',
   },
   {
     title: 'Électricité',
@@ -48,7 +48,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-6 border border-primary/30">
+            <span className="inline-block py-1 px-3 rounded-full bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider mb-6 border border-primary/30">
               Expert Électricité & Climatisation - 06
             </span>
             <h1 className="text-5xl md:text-7xl text-white mb-6 leading-[1.1]">
@@ -60,7 +60,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact"
-                className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all text-center shadow-lg shadow-blue-900/20"
+                className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/80 transition-all text-center shadow-lg shadow-emerald-900/20"
               >
                 Demander un devis gratuit
               </Link>
@@ -130,7 +130,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="text-3xl md:text-4xl mb-8">Pourquoi choisir Azur Élec & Clim ?</h2>
+            <h2 className="text-3xl md:text-4xl mb-8">Pourquoi choisir Maifelec ?</h2>
             <div className="space-y-8">
               {[
                 { title: 'Réactivité Immédiate', desc: 'Intervention d\'urgence 7j/7 dans tout le département des Alpes-Maritimes.', icon: Clock },
@@ -158,7 +158,7 @@ export default function Home() {
           {stats.map((stat) => (
             <div key={stat.label}>
               <p className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.value}</p>
-              <p className="text-blue-100 text-sm font-medium">{stat.label}</p>
+              <p className="text-emerald-100 text-sm font-medium">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -167,8 +167,8 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section-padding">
         <div className="bg-slate-900 rounded-[3rem] p-8 md:p-16 text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 blur-[100px] rounded-full" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/25 blur-[100px] rounded-full" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full" />
           
           <div className="relative z-10 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl text-white mb-6">Prêt à démarrer votre projet ?</h2>
@@ -178,7 +178,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 to="/contact"
-                className="bg-primary text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all"
+                className="bg-primary text-white px-10 py-4 rounded-xl font-bold hover:bg-primary/80 transition-all"
               >
                 Obtenir mon devis gratuit
               </Link>

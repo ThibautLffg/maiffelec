@@ -67,7 +67,7 @@ export default function Electricite() {
       <section className="section-padding">
         <div className="bg-slate-100 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center">
           <div className="flex-1">
-            <div className="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wider mb-4">
               <Users size={16} />
               Espace Professionnels
             </div>
@@ -75,7 +75,7 @@ export default function Electricite() {
             <p className="text-slate-600 mb-8 leading-relaxed">
               Architectes, syndics, promoteurs : nous vous accompagnons dans vos projets avec une rigueur technique et un respect strict des délais.
             </p>
-            <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all">
+            <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/80 transition-all">
               Contactez notre pôle pro
             </button>
           </div>
