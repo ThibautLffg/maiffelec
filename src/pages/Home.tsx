@@ -64,12 +64,12 @@ export default function Home() {
               >
                 Demander un devis gratuit
               </Link>
-              <Link
+              {/* <Link
                 to="/realisations"
                 className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all text-center"
               >
                 Voir nos réalisations
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         </div>
