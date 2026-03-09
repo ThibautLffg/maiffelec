@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Zap, Wind } from 'lucide-react';
+import { Menu, X, Phone, Wind } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
 
 const navLinks = [
@@ -22,23 +22,38 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isHome = location.pathname === '/';
+  const isTransparent = isHome && !scrolled;
+
   return (
     <nav
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300',
-        scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
+        scrolled || !isHome ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
       )}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-primary p-2 rounded-lg text-white group-hover:scale-110 transition-transform">
-            <Zap size={24} className="fill-current" />
-          </div>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src="/logo.png"
+            alt="Maifelec"
+            className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
+          />
           <div className="flex flex-col leading-none">
-            <span className={cn("text-xl font-bold tracking-tight", scrolled ? "text-slate-900" : "text-slate-900")}>
-              Azur Élec & Clim
+            <span
+              className={cn(
+                'text-xl font-bold tracking-tight',
+                isTransparent ? 'text-white' : 'text-slate-900'
+              )}
+            >
+              Maifelec
             </span>
-            <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-primary">
+            <span
+              className={cn(
+                'text-[10px] uppercase tracking-[0.2em] font-semibold',
+                isTransparent ? 'text-white/80' : 'text-primary'
+              )}
+            >
               Alpes-Maritimes 06
             </span>
           </div>
@@ -51,8 +66,14 @@ export default function Navbar() {
               key={link.name}
               to={link.href}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-primary',
-                location.pathname === link.href ? 'text-primary' : 'text-slate-600'
+                'text-sm font-medium transition-colors',
+                location.pathname === link.href
+                  ? isTransparent
+                    ? 'text-white'
+                    : 'text-primary'
+                  : isTransparent
+                    ? 'text-white/90 hover:text-white'
+                    : 'text-slate-600 hover:text-primary'
               )}
             >
               {link.name}
@@ -63,12 +84,18 @@ export default function Navbar() {
             className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
           >
             <Phone size={16} />
-            06 00 00 00 00
+            06 62 79 26 35
           </a>
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-slate-900" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className={cn(
+            'md:hidden',
+            isTransparent ? 'text-white' : 'text-slate-900'
+          )}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>

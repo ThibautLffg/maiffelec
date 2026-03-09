@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom';
-import { Zap, Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-300 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-1">
-          <Link to="/" className="flex items-center gap-2 mb-6">
-            <div className="bg-primary p-2 rounded-lg text-white">
-              <Zap size={24} className="fill-current" />
-            </div>
-            <span className="text-xl font-bold text-white tracking-tight">Azur Élec & Clim</span>
+          <Link to="/" className="flex items-center gap-3 mb-6">
+            <img
+              src="/logo.png"
+              alt="Maifelec"
+              className="h-10 w-auto object-contain"
+            />
+            <span className="text-xl font-bold text-white tracking-tight">Maifelec</span>
           </Link>
           <p className="text-sm leading-relaxed mb-6">
             Votre expert de confiance pour tous vos besoins en électricité et climatisation dans les Alpes-Maritimes. Intervention rapide et travail soigné.
@@ -53,21 +55,28 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-primary shrink-0" />
-              <a href="tel:0600000000" className="hover:text-white transition-colors">06 00 00 00 00</a>
+              <a href="tel:0600000000" className="hover:text-white transition-colors">06 62 79 26 35</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={18} className="text-primary shrink-0" />
-              <a href="mailto:contact@azurelec-clim.fr" className="hover:text-white transition-colors">contact@azurelec-clim.fr</a>
+              <a href="mailto:romain.maifelec@gmail.com" className="hover:text-white transition-colors">romain.maifelec@gmail.com</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-        <p>© {new Date().getFullYear()} Azur Élec & Clim. Tous droits réservés.</p>
+        <p>© {new Date().getFullYear()} Maifelec. Tous droits réservés.</p>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-white transition-colors">Mentions Légales</a>
-          <a href="#" className="hover:text-white transition-colors">Politique de Confidentialité</a>
+          <Link to="/mentions-legales" className="hover:text-white transition-colors">
+            Mentions Légales
+          </Link>
+          <Link
+            to="/politique-de-confidentialite"
+            className="hover:text-white transition-colors"
+          >
+            Politique de Confidentialité
+          </Link>
         </div>
       </div>
     </footer>

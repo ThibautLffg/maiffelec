@@ -6,6 +6,9 @@ import Climatisation from './pages/Climatisation';
 import Electricite from './pages/Electricite';
 import Realisations from './pages/Realisations';
 import Contact from './pages/Contact';
+import Merci from './pages/Merci';
+import MentionsLegales from './pages/MentionsLegales';
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 
 export default function App() {
   return (
@@ -19,6 +22,12 @@ export default function App() {
             <Route path="/electricite" element={<Electricite />} />
             <Route path="/realisations" element={<Realisations />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/merci" element={<Merci />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+            <Route
+              path="/politique-de-confidentialite"
+              element={<PolitiqueConfidentialite />}
+            />
           </Routes>
         </main>
         <Footer />

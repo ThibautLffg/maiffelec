@@ -1,3 +1,5 @@
+import { FormEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Send, Star, Quote } from 'lucide-react';
 
@@ -23,6 +25,46 @@ const reviews = [
 ];
 
 export default function Contact() {
+  const navigate = useNavigate();
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setError(null);
+
+    if (!name || !email || !message) {
+      setError('Merci de remplir au minimum votre nom, votre email et votre message.');
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, phone, email, message }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error || "Une erreur est survenue lors de l'envoi.");
+      }
+
+      navigate('/merci');
+    } catch (err: any) {
+      setError(err.message || "Impossible d'envoyer votre message pour le moment.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="pt-24">
       {/* Header */}
@@ -48,14 +90,14 @@ export default function Contact() {
                   <Phone size={20} />
                 </div>
                 <h4 className="font-bold mb-1">Téléphone</h4>
-                <p className="text-slate-600 text-sm">06 00 00 00 00</p>
+                <p className="text-slate-600 text-sm">06 62 79 26 35</p>
               </div>
               <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
                 <div className="w-10 h-10 bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-4">
                   <Mail size={20} />
                 </div>
                 <h4 className="font-bold mb-1">Email</h4>
-                <p className="text-slate-600 text-sm">contact@azurelec-clim.fr</p>
+                <p className="text-slate-600 text-sm">romain.maifelec@gmail.com</p>
               </div>
               <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm sm:col-span-2">
                 <div className="w-10 h-10 bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-4">
@@ -68,27 +110,56 @@ export default function Contact() {
 
             <div className="bg-slate-900 p-8 md:p-12 rounded-[2.5rem] text-white">
               <h3 className="text-2xl font-bold mb-8">Envoyez-nous un message</h3>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Nom</label>
-                    <input type="text" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none" />
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none"
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Téléphone</label>
-                    <input type="tel" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none" />
+                    <input
+                      type="tel"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none"
+                    />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Email</label>
-                  <input type="email" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none" />
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none"
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Message</label>
-                  <textarea rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none resize-none"></textarea>
+                  <textarea
+                    rows={4}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none resize-none"
+                  ></textarea>
                 </div>
-                <button className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-all flex items-center justify-center gap-2">
-                  Envoyer ma demande <Send size={18} />
+                {error && (
+                  <p className="text-sm text-red-300 bg-red-500/10 border border-red-500/30 rounded-lg px-4 py-3">
+                    {error}
+                  </p>
+                )}
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-blue-700 disabled:opacity-60 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
+                >
+                  {loading ? 'Envoi en cours...' : 'Envoyer ma demande'} <Send size={18} />
                 </button>
               </form>
             </div>
