@@ -62,7 +62,7 @@ export default function Home() {
                 to="/contact"
                 className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/80 transition-all text-center shadow-lg shadow-emerald-900/20"
               >
-                Demander un devis gratuit
+                Contactez-nous
               </Link>
               {/* <Link
                 to="/realisations"

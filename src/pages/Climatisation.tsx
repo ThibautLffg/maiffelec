@@ -31,7 +31,7 @@ export default function Climatisation() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl mb-6">Solutions de Climatisation</h1>
             <p className="text-lg text-slate-600 leading-relaxed">
-              Nous installons les meilleures marques (Daikin, Mitsubishi, Panasonic) pour vous garantir un confort thermique optimal été comme hiver dans tout le 06.
+              Nous installons les meilleures marques (Toshiba) pour vous garantir un confort thermique optimal été comme hiver dans tout le 06.
             </p>
           </div>
         </div>
