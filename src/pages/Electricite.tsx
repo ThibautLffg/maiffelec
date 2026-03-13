@@ -28,17 +28,17 @@ const Services2 = [
   {
     title: 'Électricité Générale',
     description: 'Installation, rénovation et dépannage de vos équipements électriques pour particuliers et professionnels.',
-    image: '/public/pages/ElectriciteGeneral.jpg',
+    image: '/pages/ElectriciteGeneral.jpg',
   },
   {
     title: 'Sécurité',
     description: 'Installation de systèmes de sécurité : alarmes, vidéosurveillance et contrôle d’accès pour protéger votre habitation ou vos locaux.',
-    image: '/public/pages/alarme.png',
+    image: '/pages/alarme.png',
   },
   {
     title: 'Domotique',
     description: 'Automatisation de votre habitat : éclairage, volets, chauffage et équipements connectés pour plus de confort et d’efficacité.',
-    image: '/public/pages/domotique.jpg',
+    image: '/pages/domotique.jpg',
   },
   
 ];
