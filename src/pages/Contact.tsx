@@ -97,7 +97,7 @@ export default function Contact() {
                   <Mail size={20} />
                 </div>
                 <h4 className="font-bold mb-1">Email</h4>
-                <p className="text-slate-600 text-sm">romain.maifelec@gmail.com</p>
+                <p className="text-slate-600 text-sm">contact.maifelec@gmail.com</p>
               </div>
               <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm sm:col-span-2">
                 <div className="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">

@@ -111,6 +111,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Section */}
+<section className="section-padding">
+  <div className="max-w-4xl mx-auto text-center mb-16">
+    <h2 className="text-3xl md:text-4xl mb-6">À propos de MAIFELEC</h2>
+    <p className="text-slate-600 leading-relaxed">
+      Chez <strong>MAIFELEC</strong>, nous mettons notre expertise au service de vos installations électriques et de vos solutions de climatisation.
+      Spécialisée dans les travaux d'électricité générale et l'installation de systèmes de climatisation, notre entreprise accompagne
+      particuliers et professionnels dans tous leurs projets, en neuf comme en rénovation.
+    </p>
+  </div>
+
+  <div className="grid md:grid-cols-3 gap-8 ">
+    <div className="bg-primary/5 p-8 rounded-3xl shadow-sm border border-slate-100 text-center ">
+      <h3 className="text-xl font-bold mb-3  ">Installations Fiables</h3>
+      <p className="text-slate-600 text-sm">
+        Nous réalisons des installations performantes et conformes aux normes en vigueur pour garantir sécurité et durabilité.
+      </p>
+    </div>
+
+    <div className="bg-primary/5 p-8 rounded-3xl shadow-sm border border-slate-100 text-center">
+      <h3 className="text-xl font-bold mb-3">Expertise & Conseil</h3>
+      <p className="text-slate-600 text-sm">
+        Grâce à notre savoir-faire et à notre sens du détail, nous vous accompagnons dans le choix des meilleures solutions pour votre projet.
+      </p>
+    </div>
+
+    <div className="bg-primary/5 p-8 rounded-3xl shadow-sm border border-slate-100 text-center">
+      <h3 className="text-xl font-bold mb-3">Service Professionnel</h3>
+      <p className="text-slate-600 text-sm">
+        De l'étude du projet jusqu'à la réalisation des travaux, nous assurons un service sérieux, réactif et transparent.
+      </p>
+    </div>
+  </div>
+</section>
+
       {/* Why Us Section */}
       <section className="section-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -130,17 +165,17 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="text-3xl md:text-4xl mb-8">Pourquoi choisir Maifelec ?</h2>
+            <h2 className="text-3xl md:text-4xl mb-8">Pourquoi choisir MAIFELEC ?</h2>
             <div className="space-y-8">
               {[
                 { title: 'Réactivité Immédiate', desc: 'Intervention d\'urgence 7j/7 dans tout le département des Alpes-Maritimes.', icon: Clock },
                 { title: 'Garantie Décennale', desc: 'Toutes nos installations sont couvertes par une assurance décennale pour votre tranquillité.', icon: ShieldCheck },
                 { title: 'Expertise Certifiée', desc: 'Nos techniciens sont formés aux dernières normes et technologies du marché.', icon: Star },
               ].map((item) => (
-                <div key={item.title} className="flex gap-6">
-                  <div className="bg-slate-100 p-4 rounded-2xl shrink-0 text-primary">
-                    <item.icon size={24} />
-                  </div>
+                <div key={item.title} className="flex gap-6 items-center">
+                 <div className="bg-slate-100 w-14 h-14 flex items-center justify-center rounded-2xl shrink-0 text-primary group-hover:scale-110 transition-transform">
+  <item.icon size={24} />
+</div>
                   <div>
                     <h4 className="text-lg font-bold mb-2">{item.title}</h4>
                     <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>

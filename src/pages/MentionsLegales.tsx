@@ -61,7 +61,7 @@ export default function MentionsLegales() {
             <h2 className="text-lg font-bold mb-2">Contact</h2>
             <p>
               Pour toute question concernant le site ou son contenu, vous pouvez nous contacter à
-              l&apos;adresse suivante : romain.maifelec@gmail.com.
+              l&apos;adresse suivante : contact.maifelec@gmail.com.
             </p>
           </div>
         </div>

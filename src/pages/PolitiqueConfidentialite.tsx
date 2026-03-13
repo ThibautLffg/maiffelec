@@ -55,7 +55,7 @@ export default function PolitiqueConfidentialite() {
             <p>
               Vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;opposition et de suppression des
               données vous concernant. Pour exercer ces droits, vous pouvez nous écrire à
-              l&apos;adresse suivante : romain.maifelec@gmail.com.
+              l&apos;adresse suivante : contact.maifelec@gmail.com.
             </p>
           </div>
 
