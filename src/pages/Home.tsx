@@ -52,7 +52,7 @@ export default function Home() {
               Expert Électricité & Climatisation - 06
             </span>
             <h1 className="text-5xl md:text-7xl text-white mb-6 leading-[1.1]">
-            Électricien professionnel pour votre <span className="text-primary">Maison</span>
+            Électricien professionnel <br /> pour votre <span className="text-primary">Maison</span>
             </h1>
             <p className="text-lg text-slate-300 mb-10 leading-relaxed">
               Intervention rapide à Nice, Cannes, Antibes et dans toutes les Alpes-Maritimes. De l'installation à la maintenance, nous assurons votre sérénité.
