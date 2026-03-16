@@ -61,9 +61,13 @@ export default function Home() {
           <span className="text-primary">Rapides dans le 06</span>  
         </h1>
 
-        <p className="text-lg text-slate-300 mb-10 leading-relaxed">
+        {/* <p className="text-lg text-slate-300 mb-10 leading-relaxed">
           Interventions rapides à Nice, Cannes, Antibes et dans toutes les Alpes-Maritimes.
           De l'installation à la maintenance, nous assurons votre sérénité.
+        </p> */}
+        <p className="text-lg text-slate-300 mb-10 leading-relaxed">
+        Chez MAIFELEC, nous mettons notre expertise au service de vos installations électriques et de vos solutions de climatisation à Nice, Cannes, Antibes et dans toutes les Alpes-Maritimes.
+
         </p>
 
         {/* CTA */}
