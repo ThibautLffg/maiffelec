@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { Zap, Building2, ShieldAlert, Hammer, Settings, Users, House, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Phone } from 'lucide-react';
 
 const services = [
   {
@@ -146,9 +148,12 @@ export default function Electricite() {
             <p className="text-slate-600 mb-8 leading-relaxed">
               Architectes, syndics, promoteurs : nous vous accompagnons dans vos projets avec une rigueur technique et un respect strict des délais.
             </p>
-            <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/80 transition-all">
-              Contactez notre pôle pro
-            </button>
+              <Link
+                to="/contact"
+                className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/80 transition-all"
+              >
+                Contactez notre pôle pro
+              </Link>
           </div>
           <div className="flex-1 w-full">
             <div className="bg-white p-8 rounded-3xl shadow-xl">

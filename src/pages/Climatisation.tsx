@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { Wind, CheckCircle2, Thermometer, Snowflake, LayoutGrid } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Phone } from 'lucide-react';
 
 const solutions = [
   {
@@ -76,9 +78,12 @@ export default function Climatisation() {
                     </li>
                   ))}
                 </ul>
-                <button className="bg-slate-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-800 transition-all">
+                <Link
+                  to="/contact"
+                  className="bg-slate-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-800 transition-all inline-block"
+                >
                   Demander une étude
-                </button>
+                </Link>
               </motion.div>
             </div>
           ))}
@@ -114,10 +119,11 @@ export default function Climatisation() {
               Votre clim ne fait plus de froid ? Elle fuit ou fait du bruit ? Nos techniciens interviennent sous 4h dans le 06.
             </p>
             <a
-              href="tel:0600000000"
-              className="block w-full bg-primary text-white text-center py-4 rounded-xl font-bold hover:bg-primary/80 transition-all"
+              href="tel:0982350792"
+              className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-primary/80 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
             >
-              Appeler un technicien
+              <Phone size={18} />
+              09 82 35 07 92
             </a>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Wind, Zap, ShieldCheck, Clock, ArrowRight, Star } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 const services = [
   {
@@ -31,49 +32,88 @@ export default function Home() {
     <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-20">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/clim.avif"
-            alt="Electrician working"
-            className="w-full h-full object-cover brightness-[0.3]"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-transparent" />
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/clim.avif"
+      alt="Electrician working"
+      className="w-full h-full object-cover brightness-[0.3]"
+      referrerPolicy="no-referrer"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-transparent" />
+  </div>
+
+  <div className="section-padding relative z-10 w-full">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+      {/* TEXTE */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-2xl"
+      >
+        <span className="inline-block py-1 px-3 rounded-full bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider mb-6 border border-primary/30">
+          Expert Électricité & Climatisation - 06
+        </span>
+
+        <h1 className="text-5xl md:text-5xl text-white mb-6 leading-[1.1]">
+        Dépannages Électriques <br />
+          <span className="text-primary">Rapides dans le 06</span>  
+        </h1>
+
+        <p className="text-lg text-slate-300 mb-10 leading-relaxed">
+          Interventions rapides à Nice, Cannes, Antibes et dans toutes les Alpes-Maritimes.
+          De l'installation à la maintenance, nous assurons votre sérénité.
+        </p>
+
+        {/* CTA */}
+        <div className="flex flex-col sm:flex-row gap-4">
+
+        <a
+          href="tel:0982350792"
+          className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/80 transition-all text-center shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2 whitespace-nowrap"
+        >
+          <Phone size={16} />
+          09 82 35 07 92
+        </a>
+
+          <Link
+            to="/contact"
+            className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition-all text-center"
+          >
+            Demande d'intervention
+          </Link>
+
+        </div>
+      </motion.div>
+
+
+      {/* STATS */}
+      <div className="grid grid-cols-2 gap-6 max-w-md lg:justify-self-end">
+
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center">
+          <div className="text-4xl font-extrabold text-white mb-2">
+            2000+
+          </div>
+          <p className="text-white font-medium text-sm whitespace-nowrap">
+            Interventions réalisées
+          </p>
         </div>
 
-        <div className="section-padding relative z-10 w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl"
-          >
-            <span className="inline-block py-1 px-3 rounded-full bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider mb-6 border border-primary/30">
-              Expert Électricité & Climatisation - 06
-            </span>
-            <h1 className="text-5xl md:text-7xl text-white mb-6 leading-[1.1]">
-            Électricien professionnel <br /> pour votre <span className="text-primary">Maison</span>
-            </h1>
-            <p className="text-lg text-slate-300 mb-10 leading-relaxed">
-              Intervention rapide à Nice, Cannes, Antibes et dans toutes les Alpes-Maritimes. De l'installation à la maintenance, nous assurons votre sérénité.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/contact"
-                className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/80 transition-all text-center shadow-lg shadow-emerald-900/20"
-              >
-                Contactez-nous
-              </Link>
-              {/* <Link
-                to="/realisations"
-                className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all text-center"
-              >
-                Voir nos réalisations
-              </Link> */}
-            </div>
-          </motion.div>
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center">
+          <div className="text-4xl font-extrabold text-white mb-2 ">
+            100%
+          </div>
+          <p className="text-white font-medium text-sm whitespace-nowrap">
+            Garantie & Transparence
+          </p>
         </div>
-      </section>
+
+</div>
+
+    </div>
+  </div>
+</section>
 
       {/* Services Section */}
       <section className="section-padding bg-slate-50">
@@ -114,7 +154,7 @@ export default function Home() {
       {/* About Section */}
 <section className="section-padding">
   <div className="max-w-4xl mx-auto text-center mb-16">
-    <h2 className="text-3xl md:text-4xl mb-6">À propos de MAIFELEC</h2>
+    <h2 className="text-3xl md:text-4xl mb-6">Interventions Rapides</h2>
     <p className="text-slate-600 leading-relaxed">
       Chez <strong>MAIFELEC</strong>, nous mettons notre expertise au service de vos installations électriques et de vos solutions de climatisation.
       Spécialisée dans les travaux d'électricité générale et l'installation de systèmes de climatisation, notre entreprise accompagne

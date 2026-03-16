@@ -84,7 +84,7 @@ export default function Navbar() {
             className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-primary/80 transition-all shadow-lg shadow-emerald-200"
           >
             <Phone size={16} />
-            06 62 79 26 35
+            09 82 35 07 92
           </a>
         </div>
 

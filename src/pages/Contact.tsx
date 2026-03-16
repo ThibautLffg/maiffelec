@@ -90,7 +90,7 @@ export default function Contact() {
                   <Phone size={20} />
                 </div>
                 <h4 className="font-bold mb-1">Téléphone</h4>
-                <p className="text-slate-600 text-sm">06 62 79 26 35</p>
+                <p className="text-slate-600 text-sm">09 82 35 07 92</p>
               </div>
               <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
                 <div className="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">

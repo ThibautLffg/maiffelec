@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Smartphone  } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -49,18 +49,33 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-bold mb-6">Contact</h4>
           <ul className="space-y-4 text-sm">
+
             <li className="flex items-start gap-3">
               <MapPin size={18} className="text-primary shrink-0" />
               <span>Nice, Cannes, Antibes et tout le 06</span>
             </li>
+
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-primary shrink-0" />
-              <a href="tel:0600000000" className="hover:text-white transition-colors">06 62 79 26 35</a>
+              <a href="tel:0982350792" className="hover:text-white transition-colors">
+                09 82 35 07 92
+              </a>
             </li>
+
+            <li className="flex items-center gap-3">
+              <Smartphone size={18} className="text-primary shrink-0" />
+              <a href="tel:0662792635" className="hover:text-white transition-colors">
+                06 62 79 26 35
+              </a>
+            </li>
+
             <li className="flex items-center gap-3">
               <Mail size={18} className="text-primary shrink-0" />
-              <a href="mailto:contact.maifelec@gmail.com" className="hover:text-white transition-colors">contact.maifelec@gmail.com</a>
+              <a href="mailto:contact.maifelec@gmail.com" className="hover:text-white transition-colors">
+                contact.maifelec@gmail.com
+              </a>
             </li>
+
           </ul>
         </div>
       </div>
