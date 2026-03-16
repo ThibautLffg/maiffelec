@@ -159,9 +159,13 @@ export default function Home() {
 <section className="section-padding">
   <div className="max-w-4xl mx-auto text-center mb-16">
     <h2 className="text-3xl md:text-4xl mb-6">Interventions Rapides</h2>
-    <p className="text-slate-600 leading-relaxed">
+    {/* <p className="text-slate-600 leading-relaxed">
       Chez <strong>MAIFELEC</strong>, nous mettons notre expertise au service de vos installations électriques et de vos solutions de climatisation.
       Spécialisée dans les travaux d'électricité générale et l'installation de systèmes de climatisation, notre entreprise accompagne
+      particuliers et professionnels dans tous leurs projets, en neuf comme en rénovation.
+    </p> */}
+    <p className="text-slate-600 leading-relaxed">
+      Nous sommes spécialisés dans les travaux d'électricité générale et l'installation de systèmes de climatisation, notre entreprise accompagne
       particuliers et professionnels dans tous leurs projets, en neuf comme en rénovation.
     </p>
   </div>
