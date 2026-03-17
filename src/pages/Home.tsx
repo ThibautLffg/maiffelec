@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-20">
+      <section className="relative py-24 lg:py-32 flex items-center">
   <div className="absolute inset-0 z-0">
     <img
       src="/clim.avif"
@@ -56,8 +56,8 @@ export default function Home() {
           Expert Électricité & Climatisation - 06
         </span>
 
-        <h1 className="text-5xl md:text-5xl text-white mb-6 leading-[1.1]">
-        Dépannages Électriques <br />
+        <h1 className="text-4xl sm:text-5xl md:text-5xl text-white mb-6 leading-snug sm:leading-[1.1]">
+          Dépannages Électriques <br />
           <span className="text-primary">Rapides dans le 06</span>  
         </h1>
 
@@ -93,25 +93,25 @@ export default function Home() {
 
 
       {/* STATS */}
-      <div className="grid grid-cols-2 gap-6 max-w-md lg:justify-self-end">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md lg:justify-self-end">
 
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center">
-          <div className="text-4xl font-extrabold text-white mb-2">
-            500+
-          </div>
-          <p className="text-white font-medium text-sm whitespace-nowrap">
-            Interventions réalisées
-          </p>
-        </div>
+  <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-center flex flex-col items-center">
+    <div className="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+      500+
+    </div>
+    <p className="text-white font-medium text-xs sm:text-sm">
+      Interventions réalisées
+    </p>
+  </div>
 
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center">
-          <div className="text-4xl font-extrabold text-white mb-2 ">
-            15+
-          </div>
-          <p className="text-white font-medium text-sm whitespace-nowrap">
-            Années d'expérience
-          </p>
-        </div>
+  <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-center flex flex-col items-center">
+    <div className="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+      15+
+    </div>
+    <p className="text-white font-medium text-xs sm:text-sm">
+      Années d'expérience
+    </p>
+  </div>
 
 </div>
 
