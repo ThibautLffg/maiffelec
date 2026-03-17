@@ -57,8 +57,8 @@ export default function Home() {
         </span>
 
         <h1 className="text-4xl sm:text-5xl md:text-5xl text-white mb-6 leading-snug sm:leading-[1.1]">
-          Dépannages Électriques <br />
-          <span className="text-primary">Rapides dans le 06</span>  
+          Électricité • Climatisation <br />
+          dans les <span className="text-primary"> Alpes-Maritimes</span>
         </h1>
 
         {/* <p className="text-lg text-slate-300 mb-10 leading-relaxed">
