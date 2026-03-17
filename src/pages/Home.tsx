@@ -21,7 +21,7 @@ const services = [
 ];
 
 const stats = [
-  { label: 'Années d\'expérience', value: '15+' },
+  { label: 'Années d\'expérience', value: '10+' },
   { label: 'Projets réalisés', value: '500+' },
   { label: 'Clients satisfaits', value: '100%' },
   { label: 'Interventions / an', value: '200+' },
@@ -106,7 +106,7 @@ export default function Home() {
 
   <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-center flex flex-col items-center">
     <div className="text-3xl sm:text-4xl font-extrabold text-white mb-1">
-      15+
+      10+
     </div>
     <p className="text-white font-medium text-xs sm:text-sm">
       Années d'expérience
@@ -207,7 +207,7 @@ export default function Home() {
               />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-primary text-white p-8 rounded-3xl shadow-xl hidden md:block">
-              <p className="text-4xl font-bold mb-1">15+</p>
+              <p className="text-4xl font-bold mb-1">10+</p>
               <p className="text-sm font-medium opacity-80">Années d'expérience</p>
             </div>
           </div>
