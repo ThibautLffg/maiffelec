@@ -36,28 +36,40 @@ export default function Contact() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setError(null);
-
+  
     if (!name || !email || !message) {
       setError('Merci de remplir au minimum votre nom, votre email et votre message.');
       return;
     }
-
+  
     try {
       setLoading(true);
-      const res = await fetch('/api/contact', {
+  
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify({ name, phone, email, message }),
+        body: JSON.stringify({
+          access_key: 'd6ba7d9a-b12c-48c2-ad1c-5eec7b234650',
+          subject: `Nouveau contact Maifelec - ${name}`,
+          from_name: name,
+          replyto: email,
+          email: 'contact.maifelec@gmail.com',
+          phone: phone || 'Non renseigné',
+          message: message,
+        }),
       });
-
+  
+      const data = await res.json();
+  
       if (!res.ok) {
-        const data = await res.json().catch(() => null);
-        throw new Error(data?.error || "Une erreur est survenue lors de l'envoi.");
+        throw new Error(data.message || "Une erreur est survenue.");
       }
-
+  
       navigate('/merci');
+  
     } catch (err: any) {
       setError(err.message || "Impossible d'envoyer votre message pour le moment.");
     } finally {
