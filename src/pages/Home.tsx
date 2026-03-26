@@ -200,7 +200,7 @@ export default function Home() {
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="/pages/gainablegrand.jpeg"
+                src="/pages/gainablegrand.webp"
                 alt="Our team"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

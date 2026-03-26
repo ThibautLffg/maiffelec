@@ -8,19 +8,19 @@ const solutions = [
     title: 'Split Mural',
     description: 'La solution classique et efficace pour climatiser une pièce unique. Design discret et performance énergétique.',
     features: ['Installation rapide', 'Silencieux', 'Filtration de l\'air', 'Contrôle WiFi'],
-   image: '/pages/splitmuralgrand.jpg',
+   image: '/pages/splitmuralgrand.webp',
   },
   {
     title: 'Multi-Split',
     description: 'Une seule unité extérieure pour plusieurs unités intérieures. Idéal pour climatiser tout un appartement ou une maison.',
     features: ['Réglage par zone', 'Économie de place', 'Évolutif', 'Haute performance'],
-    image: '/pages/multigrand.jpg',
+    image: '/pages/multigrand.webp',
   },
   {
     title: 'Gainable',
     description: 'Le summum du confort et de l\'esthétique. Système invisible intégré dans vos faux-plafonds.',
     features: ['Invisible', 'Confort homogène', 'Valorisation du bien', 'Ultra-silencieux'],
-    image: '/pages/gainablegrand.jpeg',
+    image: '/pages/gainablegrand.webp',
   },
 ];
 

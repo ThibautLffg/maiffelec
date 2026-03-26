@@ -30,7 +30,7 @@ const Services2 = [
   {
     title: 'Électricité Générale',
     description: 'Installation, rénovation et dépannage de vos équipements électriques pour particuliers et professionnels.',
-    image: '/pages/ElectriciteGeneral.jpg',
+    image: '/pages/ElectriciteGeneral.webp',
   },
   {
     title: 'Sécurité',
@@ -40,7 +40,7 @@ const Services2 = [
   {
     title: 'Domotique',
     description: 'Automatisation de votre habitat : éclairage, volets, chauffage et équipements connectés pour plus de confort et d’efficacité.',
-    image: '/pages/domotique.jpg',
+    image: '/pages/domotique.webp',
   },
   
 ];
