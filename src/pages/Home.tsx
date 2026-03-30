@@ -195,7 +195,7 @@ export default function Home() {
 </section>
 
       {/* Why Us Section */}
-      <section className="section-padding">
+      <section id="why-maifelec" className="section-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">

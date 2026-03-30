@@ -39,7 +39,7 @@ export default function Footer() {
           <h4 className="text-white font-bold mb-6">Liens Rapides</h4>
           <ul className="space-y-4 text-sm">
             <li><Link to="/" className="hover:text-primary transition-colors">Accueil</Link></li>
-            <li><Link to="/realisations" className="hover:text-primary transition-colors">Nos Réalisations</Link></li>
+            <li><Link to="/#why-maifelec" className="hover:text-primary transition-colors">Maifelec</Link></li>
             <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             <li><Link to="/contact" className="hover:text-primary transition-colors">Demander un devis</Link></li>
             <li><Link to="/contact" className="hover:text-primary transition-colors">Avis Clients</Link></li>
