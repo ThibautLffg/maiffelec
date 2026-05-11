@@ -52,7 +52,7 @@ export default function Contact() {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'd6ba7d9a-b12c-48c2-ad1c-5eec7b234650',
+          access_key: '3951b848-adc2-45a5-9101-02d643cf09be',
           subject: `Nouveau contact Maifelec - ${name}`,
           from_name: name,
           replyto: email,
